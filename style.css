@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+body {
+    scroll-behavior: smooth;
+    background-color: #151D21;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.visualizer-container {
+    position: absolute;
+
+    bottom: 450px;
+    right: 0;
+    left: 0;
+
+    text-align: center;
+}
+
+.visualizer-container__bar {
+
+    display: inline-block;
+    background: rgb(0, 0, 0);
+    margin: 0 2px;
+    width: 25px;
+
+}
+
+/* yeet */
+
+*{
+    margin: 0;
+    transition: .25s ease;
+}
+
+#track_image {
+    border-style: solid;
+}
+
+.BAR{
+    list-style: none;
+    text-align: right;
+    font-family: POPPINS;
+    padding-right: 10px;
+    position: relative;
+}
+
+.BAR li {
+    padding-top: calc(6vh - 18px);
+    display: inline-block;
+    padding-left: 3%;
+    padding-right: 3%;
+    font-size: 18px;
+}
+
+#bar a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.wrapper {
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+    padding-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 14px;
+    background-color: #18181894;
+    color: lavenderblush;
+    z-index: 1;
+    border-color: #282828;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    font-family: poppins;
+}
+
+#songName {
+    font-size: 12.5px;
+    margin-top: 10px;
+    line-height: 10px;
+}
+
+.btn {
+    margin-top: 10px;
+    position: relative;
+}
+
+.slider_container {
+    line-height: 5px;
+}
+
+#play {
+    border: none;
+    padding: 8px 8px;
+    background: transparent;
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    font-size: 19px;
+    color: ivory;
+}
+
+.slider_container {
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+}
+
+#play:hover {
+    border: none;
+    color: rgb(207, 207, 207);
+    border-radius: 100px;
+    font-size: 19.5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-width: 0.2px;
+    border-style: none;
+}
+
+
+#back {
+    border: none;
+    padding: 8px 8px;
+    background: transparent;
+    border-radius: 70px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    color: ivory;
+}
+#back:hover {
+    color: rgb(207, 207, 207);
+    border: none;
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.2;
+}
+
+
+#next {
+    border: none;
+    padding: 8px 8px;
+    color: ivory;
+    background: transparent;
+    border-radius: 50px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+#next:hover {
+    color: rgb(207, 207, 207);
+    border: none;
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.2;
+}
+
+.duration {
+    display: inline-block;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#progressBar {
+    top: 3px;
+    color: darkslateblue;
+    width: 60%;
+    cursor: pointer;
+    line-height: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #3b3b3b; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  ::selection{
+    background-color: transparent;
+    color: #27558A;
+}
+
+@media screen and (max-width: 620px) {
+    .BAR li {
+        font-size: 10px;
+    }
+}
+
