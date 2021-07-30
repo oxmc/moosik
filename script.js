@@ -1,5 +1,6 @@
 let track_art = document.querySelector(".track-art");
 let track_name = document.querySelector(".track-name");
+let now_playing = document.querySelector(".now-playing");
 
 let playpause_btn = document.querySelector(".playpause-track");
 let next_btn = document.querySelector(".next-track");
@@ -20,12 +21,12 @@ let curr_track = document.createElement('audio');
 // Define the tracks that have to be played
 let track_list = [
   {
-    name: "Now Playing : Lost in Sound",
+    name: "Lost in Sound",
     image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.scdn.co%2Fimage%2F8981ea334e8c9c524fac295ba8b737c851812d00&f=1&nofb=1",
     path: "https://cdn.discordapp.com/attachments/750607286111567933/870186233886806066/Lost_In_Sound.mp3"
   },
   {
-    name: "Now Playing : Cipher Lemmino",
+    name: "Cipher Lemmino",
     image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fb0q5PR1xpA0%2Fmaxresdefault.jpg&f=1&nofb=1",
     path: "https://cdn.discordapp.com/attachments/750607286111567933/870187068108722186/cipher-bgm.mp3"
   },
@@ -33,7 +34,19 @@ let track_list = [
     name: "Shipping Lanes",
     artist: "Chad Crouch",
     image: "https://images.pexels.com/photos/1717969/pexels-photo-1717969.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
-    path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Chad_Crouch/Arps/Chad_Crouch_-_Shipping_Lanes.mp3",
+    path: "https://cdn.discordapp.com/attachments/798132316412837910/870248798893531136/Masked_Wolf_-_Astronaut_In_The_Ocean_Official_Music_Video.mp3",
+  },
+  {
+    name: "Shipping Lanes",
+    artist: "Chad Crouch",
+    image: "https://images.pexels.com/photos/1717969/pexels-photo-1717969.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
+    path: "https://cdn.discordapp.com/attachments/798132316412837910/870248912026476564/never-gonna-give-you-up-video.mp3",
+  },
+  {
+    name: "Shipping Lanes",
+    artist: "Chad Crouch",
+    image: "https://images.pexels.com/photos/1717969/pexels-photo-1717969.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
+    path: "https://cdn.discordapp.com/attachments/798132316412837910/870249235973546054/muhtemel.mp3",
   },
 ];
 
@@ -48,9 +61,10 @@ function loadTrack(track_index) {
   // Update details of the track
   track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
   track_name.textContent = track_list[track_index].name;
+  now_playing.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length + " TRACKS ";
 
   // Set an interval of 1000 milliseconds for updating the seek slider
-  updateTimer = setInterval(seekUpdate, 1000);
+  updateTimer = setInterval(seekUpdate, 100);
 
   // Move to the next track if the current one finishes playing
   curr_track.addEventListener("ended", nextTrack);
@@ -73,7 +87,6 @@ function playpauseTrack() {
 function playTrack() {
   curr_track.play();
   isPlaying = true;
-
   // Replace icon with the pause icon
   document.getElementById("play").innerHTML = '<i class="fa fa-pause"></i>';
 }
@@ -81,9 +94,8 @@ function playTrack() {
 function pauseTrack() {
   curr_track.pause();
   isPlaying = false;
-
   // Replace icon with the play icon
-  document.getElementById("play").innerHTML = '<i class="fa fa-play"></i>';;
+  document.getElementById("play").innerHTML = '<i class="fa fa-play"></i>';
 }
 
 function nextTrack() {
@@ -138,3 +150,29 @@ function seekUpdate() {
 
 // Load the first track in the tracklist
 loadTrack(track_index);
+
+// gayansh
+
+ document.onsubmit = function (e) {
+            e.preventDefault();
+            const search = document.querySelector("#lyrics").value;
+            console.log(`searched for ${search}`);
+            fetch(
+                `https://my-api.reynoob.repl.co/lyrics?query=${search
+                    .trim()
+                    .split(/ +/g)
+                    .join("%20")}`
+            )
+                .then((res) => res.json())
+                .then((res) => {
+                    if (res.error) {
+                        return alert(
+                            "bro that song dosent exist in google database or maybe try again ;-;"
+                        );
+                    } else {
+                        console.log(res.message);
+                        let whereToPut = document.querySelector("#result");
+                        return (whereToPut.innerText = res.message);
+                    }
+                });
+        };
