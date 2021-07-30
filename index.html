@@ -7,9 +7,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
   </head>   
   <body>
+    <div class="ALL">
     <div class="player">
       <div class="details">
-        <div class="track-art"></div>
+        <div class="now-playing" id="secks1" >PLAYING x OF y Tracks</div>
+        <div id="track-art" class="track-art"></div>
+        <h2 id="secks">Now Playing:</h2>
+        <div id="secks" class="track-name">Error Encountered</div>
       </div>
       <div class="wrapper">
           <center>
@@ -22,17 +26,17 @@
       </div>
       <div class="slider_container">
         <div id="butonz" class="current-time">00:00</div>
-        <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+        <input type="range" min="0" max="100" value="0" class="seek_slider" onchange="seekTo()">
         <div id="butonz" class="total-duration">00:00</div>
       </div>
       <div class="slider_container" id="volum">
-        <i id="buton" class="fa fa-volume-down"></i>
-        <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+        <i id="buton" class="fa fa-volume-mute"></i>
+        <input type="range" min="0" max="100" value="99" class="volume_slider" onchange="setVolume()">
         <i id="buton" class="fa fa-volume-up"></i>
       </div>
-      <div id="secks" class="track-name">Track Name</div>
       </center>
     </div>
     </div>
+  </div>
 </body>
     <script src="script.js"></script>
