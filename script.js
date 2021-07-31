@@ -31,7 +31,7 @@ let track_list = [
         path: "https://cdn.discordapp.com/attachments/750607286111567933/870187068108722186/cipher-bgm.mp3",
     },
     {
-        name: "Shipping Lanes",
+        name: "Astronaut in the ocean",
         artist: "Chad Crouch",
         image: "https://images.pexels.com/photos/1717969/pexels-photo-1717969.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
         path: "https://cdn.discordapp.com/attachments/798132316412837910/870248798893531136/Masked_Wolf_-_Astronaut_In_The_Ocean_Official_Music_Video.mp3",
@@ -43,7 +43,7 @@ let track_list = [
         path: "https://cdn.discordapp.com/attachments/798132316412837910/870248912026476564/never-gonna-give-you-up-video.mp3",
     },
     {
-        name: "Shipping Lanes",
+        name: "Rickroll",
         artist: "Chad Crouch",
         image: "https://images.pexels.com/photos/1717969/pexels-photo-1717969.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
         path: "https://cdn.discordapp.com/attachments/798132316412837910/870249235973546054/muhtemel.mp3",
@@ -79,7 +79,7 @@ function loadTrack(track_index) {
         .then((res) => {
             let lyricsDiv = document.getElementById("lyrics-para");
             if (res.error) {
-                return (lyricsDiv.innerText = "No Lyrics Found.");
+                return (lyricsDiv.innerText = "No Lyrics Found. Please try closing this and opening the lyrics tab again :)");
             } else {
                 return (lyricsDiv.innerText = res.message);
             }
@@ -190,7 +190,7 @@ function manageLyricsClick() {
             .then((res) => {
                 let lyricsDiv = document.getElementById("lyrics-para");
                 if (res.error) {
-                    return (lyricsDiv.innerText = "No Lyrics Found.");
+                    return (lyricsDiv.innerText = "No Lyrics Found. Please Close the lyrics tab and open it again :)");
                 } else {
                     return (lyricsDiv.innerText = res.message);
                 }
