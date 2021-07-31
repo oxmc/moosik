@@ -24,7 +24,7 @@
                 <div class="wrapper">
                     <center>
                         <div class="buttons" id="butons">
-                            <div id="author"><i class="fa fa-user"></i></div>
+                            <div id="user"><i class="fa fa-user"></i></div>
                             <div id="back" onclick="prevTrack()">
                                 <i class="fa fa-step-backward"></i>
                             </div>
@@ -34,7 +34,7 @@
                             <div id="next" onclick="nextTrack()">
                                 <i class="fa fa-step-forward"></i>
                             </div>
-                            <div id="lyrics" onclick="manageLyricsClick()">
+                            <div class="STOP" id="lyrics" onclick="manageLyricsClick()">
                                 <i class="fa fa-music"></i>
                             </div>
                         </div>
@@ -59,6 +59,7 @@
                                 value="99"
                                 class="volume_slider"
                                 onchange="setVolume()"
+                                id="vol"
                             />
                             <i id="buton" class="fa fa-volume-up"></i>
                         </div>
@@ -66,6 +67,7 @@
                 </div>
             </div>
         </div>
-    </body>
+    </body> 
     <script src="script.js"></script>
 </html>
+
