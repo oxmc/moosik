@@ -65,7 +65,7 @@ function loadTrack(track_index) {
         "PLAYING " + (track_index + 1) + " OF " + track_list.length + " TRACKS ";
 
     // Set an interval of 1000 milliseconds for updating the seek slider
-    updateTimer = setInterval(seekUpdate, 10);
+    updateTimer = setInterval(seekUpdate, 1000);
 
     // Move to the next track if the current one finishes playing
     curr_track.addEventListener("ended", nextTrack);
