@@ -15,7 +15,7 @@ body {
 
 * {
   margin: 0;
-  transition: 0.5s ease;
+  transition: 0.25s ease;
   align-self: center;
 }
 
@@ -284,6 +284,44 @@ body {
   cursor: pointer;
 }
 
+#show {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  overflow-x: hidden;
+}
+#show a {
+  color: #66ddcc;
+}
+#show a:hover {
+  color: #669999;
+}
+#shade {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#choose {
+  display: none;
+  position: absolute;
+  left: 25vw;
+  top: calc(50vh - 35vw / 2);
+  width: 50vw;
+  height: 400px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 50px;
+  text-align: center;
+  color: #000000;
+  font-size: 16px;
+  font-family: "Poppins";
+  overflow: hidden;
+  overflow-x: hidden;
+  padding: 25px;
+}
+
 @keyframes rotate {
   100% {
     -webkit-transform: rotate(360deg);
@@ -393,4 +431,65 @@ body {
   .STOP {
     display: none;
   }
+}
+
+@media screen and (max-width: 1300px) {
+  #columns {
+    flex-direction: column;
+    align-items: center;
+    position: initial;
+  }
+  .column-title {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 850px) {
+  #choose {
+    left: 20vw;
+    width: 60vw;
+    top: calc(50vh - 60vw / 2);
+    height: 60vw;
+    border-radius: 40px;
+    overflow: scroll;
+  }
+}
+@media screen and (max-width: 620px) {
+  #choose {
+    left: 10vw;
+    width: 80vw;
+    top: calc(50vh - 100vw / 2);
+    height: 100vw;
+    border-radius: 30px;
+    overflow: scroll;
+  }
+}
+
+.github-ribbon {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  z-index: 99999;
+}
+.github-ribbon a {
+  display: inline-block;
+  width: 200px;
+  overflow: hidden;
+  padding: 6px 0px;
+  text-align: center;
+  transform: rotate(45deg);
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  position: inherit;
+  top: 45px;
+  right: -40px;
+  border-width: 1px 0px;
+  border-style: dotted;
+  border-color: rgba(255, 255, 255, 0.7);
+  font: 700 13px poppins;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 3px 0px;
+  background-color: rgb(170, 0, 0);
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
 }
