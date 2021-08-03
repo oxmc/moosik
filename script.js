@@ -50,6 +50,8 @@ let track_list = [
     },
 ];
 
+console.log("powered by F-Fengzi")
+
 function loadTrack(track_index) {
     clearInterval(updateTimer);
     resetValues();
@@ -137,6 +139,10 @@ function setVolume() {
     curr_track.volume = volume_slider.value / 100;
 }
 
+function h() {
+    curr_track.volume = 0.4
+}
+
 function seekUpdate() {
     let seekPosition = 0;
 
@@ -204,3 +210,23 @@ function manageLyricsClick() {
 // document.onsubmit = function (e) {
 //     e.preventDefault();
 // };
+
+function shad() {
+    document.getElementById("show").style.display == "block" && document.getElementById("choose").style.display == "block"
+        document.getElementById("show").style.display = "none";
+        document.getElementById("choose").style.display = "none";
+}
+
+function user() {
+        document.getElementById("show").style.display = "block";
+        document.getElementById("choose").style.display = "block";
+}
+
+document.onkeydown = function(event){
+    if (event.keyCode == 27){
+        if (document.getElementById("show").style.display == "block" && document.getElementById("choose").style.display == "block"){
+            document.getElementById("show").style.display = "none";
+            document.getElementById("choose").style.display = "none";
+        }
+    }
+}
