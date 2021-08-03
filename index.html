@@ -9,12 +9,23 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
         />
     </head>
-    <body>
+    <body onload="h()">
         <div class="ALL">
             <div id="lyrics-div" class="no-display">
                 <p id="lyrics-para">Loading Lyrics....</p>
             </div>
+            <div class="github-ribbon">
+                <a target="_blank" href="https://github.com/moon1789/moosik" >Fork me on GitHub</a>
+              </div>
             <div class="player">
+                <div id="show">
+                    <div id="shade" onclick="shad()" ></div>
+                    <div id="choose">
+                        <p style="font-size: 40px">Moosik</p>
+                        <p style="margin-top: 30px">Made by Reyansh-Khobragade and Moon1789 under MIT lisence.</p> <p style="margin-top: 30px" > <img height="100vw" width="110vw" src="https://media.discordapp.net/attachments/750607286111567933/866573518958100530/moosik.png?width=448&height=396"></p>
+                        </div>
+                        </div>
+                    </div>
                 <div class="details">
                     <div class="now-playing" id="secks1">PLAYING x OF y Tracks</div>
                     <div id="track-art" class="track-art"></div>
@@ -24,7 +35,7 @@
                 <div class="wrapper">
                     <center>
                         <div class="buttons" id="butons">
-                            <div id="user"><i class="fa fa-user"></i></div>
+                            <div id="user" onclick="user()" ><i class="fa fa-user"></i></div>
                             <div id="back" onclick="prevTrack()">
                                 <i class="fa fa-step-backward"></i>
                             </div>
@@ -56,7 +67,7 @@
                                 type="range"
                                 min="0"
                                 max="100"
-                                value="99"
+                                value="40"
                                 class="volume_slider"
                                 onchange="setVolume()"
                                 id="vol"
