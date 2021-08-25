@@ -1,0 +1,93 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Moosik</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="description" content="Moosik is gud for helth">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+        />
+    </head>
+    <body onload="h()">
+        <div class="ALL">
+            <div id="lyrics-div" class="no-display">
+                <p id="lyrics-para">Loading Lyrics....</p>
+            </div>
+            <div class="player">
+                <div id="show">
+                    <div id="shade" onclick="shad()" ></div>
+                    <div id="choose">
+                        <p style="font-size: 40px">Moosik</p>
+                        <p style="margin-top: 30px">Made by Reyansh-Khobragade and Moon1789 under MIT license.<a href="https://github.com/moon1789/moosik">Github</a></p> <p style="margin-top: 30px" > <img height="100vw" width="110vw" src="https://media.discordapp.net/attachments/750607286111567933/866573518958100530/moosik.png?width=448&height=396"></p>
+                        </div>
+                        </div>
+                    </div>
+                <div class="details">
+                    <div id="serch" class="serch">
+                        <div id="wrap" class="wrap">
+                            <div class="search">
+                               <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                               <button type="submit" class="searchButton">
+                                 <i class="fa fa-search"></i>
+                              </button>
+                            </div>
+                            <p><h2 id="searched_song">Playing Now - henta- WHAT</h2></p>
+                         </div>
+                    </div>
+                    <div id="track-art" class="track-art"></div>
+                    <h2 id="secks">Now Playing:</h2>
+                    <div id="secks" class="track-name">Error Encountered</div>
+                </div>
+                <div class="wrapper">
+                    <center>
+                        <div class="buttons" id="butons">
+                            <div id="user" onclick="user()" ><i class="fa fa-user"></i></div>
+                            <div id="back" onclick="prevTrack()">
+                                <i class="fa fa-step-backward"></i>
+                            </div>
+                            <div id="play" onclick="playpauseTrack()">
+                                <i class="fa fa-play"></i>
+                            </div>
+                            <div id="next" onclick="nextTrack()">
+                                <i class="fa fa-step-forward"></i>
+                            </div>
+                            <div id="user" onclick="serch()" ><i class="fa fa-search"></i></div>
+                            <div class="STOP" id="lyrics" onclick="manageLyricsClick()">
+                                <i class="fa fa-music"></i>
+                            </div>
+                        </div>
+                        <div class="slider_container">
+                            <div id="butonz" class="current-time">00:00</div>
+                            <input
+                                type="range"
+                                min="0"
+                                max="100"
+                                value="0"
+                                class="seek_slider"
+                                onchange="seekTo()"
+                            />
+                            <div id="butonz" class="total-duration">00:00</div>
+                        </div>
+                        <div class="slider_container" id="volum">
+                            <i id="buton" class="fa fa-volume-mute"></i>
+                            <input
+                                type="range"
+                                min="0"
+                                max="100"
+                                value="40"
+                                class="volume_slider"
+                                onchange="setVolume()"
+                                id="vol"
+                            />
+                            <i id="buton" class="fa fa-volume-up"></i>
+                        </div>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </body> 
+    <script src="script.js"></script>
+</html>
+
