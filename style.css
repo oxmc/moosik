@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
 body {
   scroll-behavior: smooth;
   background-color: #151d21;
@@ -6,7 +12,7 @@ body {
   background-size: cover;
   overflow: hidden;
   align-self: center;
-  background-image: url(https://bing.biturl.top/?resolution=1920&format=image&index=0&mkt=zh-CN);
+  background-image: url("background2.jpg");
 }
 
 .All {
@@ -44,7 +50,7 @@ body {
   margin: 25px;
   height: 250px;
   width: 250px;
-  background-image: url("https://media.discordapp.net/attachments/750607286111567933/870210702697177088/Untitled.png?width=230&height=230");
+  background-image: url("/img/moosik.jpeg");
   background-size: 100% 100%;
   border-radius: 100%;
   display: block;
@@ -124,6 +130,33 @@ body {
   border-radius: 10px;
   font-family: poppins;
   z-index: 9999;
+  box-shadow: 0 0 8px black;
+}
+
+.wrapper-top {
+  position: fixed;
+  top: 0;
+  margin: 0;
+  padding-bottom: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 14px;
+  color: lavenderblush;
+  z-index: 1;
+  font-family: poppins;
+  z-index: 9999;
+}
+
+#butons1 {
+  background-color: rgba(0, 0, 0, 0.25);
+  width: 10%;
+  border-radius: 20px;
+  padding-bottom: 5px;
+}
+
+#butons1:hover {
+  padding: 5px;
 }
 
 #play {
@@ -195,6 +228,54 @@ body {
   transition-duration: 0.2;
 }
 
+#user {
+  cursor: pointer;
+  border: none;
+  padding: 8px 8px;
+  color: ivory;
+  background: transparent;
+  border-radius: 50px;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+
+#user:hover {
+  color: rgb(199, 199, 199);
+  border: none;
+  border-radius: 50px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition-duration: 0.2;
+}
+
+#serch {
+  cursor: pointer;
+  border: none;
+  padding: 8px 8px;
+  color: ivory;
+  background: transparent;
+  border-radius: 50px;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+
+#serch:hover {
+  color: rgb(199, 199, 199);
+  border: none;
+  border-radius: 50px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition-duration: 0.2;
+}
+
 #lyrics {
   cursor: pointer;
   border: none;
@@ -209,8 +290,8 @@ body {
   transition-duration: 0.2s;
 }
 
-#lyrics :hover {
-  color: rgb(207, 207, 207);
+#lyrics:hover {
+  color: rgb(199, 199, 199);
   border: none;
   border-radius: 50px;
   text-align: center;
@@ -273,43 +354,19 @@ body {
 
 /*   */
 
-#user {
-  cursor: pointer;
-  border: none;
-  padding: 8px 8px;
-  color: ivory;
-  background: transparent;
-  border-radius: 50px;
-  font-size: 18px;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  transition-duration: 0.2s;
-}
-
-#user :hover {
-  color: rgb(207, 207, 207);
-  border: none;
-  border-radius: 50px;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  transition-duration: 0.2;
-}
-
 #lyrics-div {
   overflow-y: scroll;
-  width: 100vw;
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  padding: 1rem 1rem 1rem 1rem;
   background-color: rgba(0, 0, 0, 0.623);
   transition-duration: 0.25s;
   z-index: 1;
   overflow-x: hidden;
   transition: 1s ease-in-out;
+  padding-top: 26px;
 }
 
 #lyrics-div p {
@@ -397,11 +454,8 @@ body {
     margin-right: auto;
     margin-top: 90px;
   }
-  #lyrics-div p {
-    display: none;
-  }
-  .STOP {
-    display: none;
+  #butons1 {
+    width: 32%;
   }
 }
 @media screen and (max-width: 321px) {
@@ -416,13 +470,6 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 90px;
-  }
-
-  #lyrics-div p {
-    display: none;
-  }
-  .STOP {
-    display: none;
   }
 }
 
@@ -439,13 +486,6 @@ body {
     margin-right: auto;
     margin-top: 90px;
   }
-  #lyrics-div p {
-    display: none;
-  }
-
-  .STOP {
-    display: none;
-  }
 }
 @media screen and (max-width: 570px) {
   #track-art {
@@ -459,12 +499,6 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 90px;
-  }
-  #lyrics-div p {
-    display: none;
-  }
-  .STOP {
-    display: none;
   }
   .wrap {
     width: 70%;
@@ -497,12 +531,6 @@ body {
     margin-right: auto;
     margin-top: 90px;
   }
-  #lyrics-div p {
-    display: none;
-  }
-  .STOP {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 1300px) {
@@ -534,4 +562,13 @@ body {
     border-radius: 30px;
     overflow: scroll;
   }
+}
+
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #ff0000;
 }

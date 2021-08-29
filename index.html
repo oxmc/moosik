@@ -12,6 +12,17 @@
     </head>
     <body onload="h()">
         <div class="ALL">
+            <div class="wrapper-top">
+                <center>
+                    <div class="buttons" id="butons1">
+                        <div id="user" onclick="user()" ><i class="fa fa-user"></i></div>
+                        <div id="serch" onclick="serch()" ><i class="fa fa-search"></i></div>
+                        <div class="STOP" id="lyrics" onclick="manageLyricsClick()">
+                            <i class="fa fa-music"></i>
+                        </div>
+                    </div>
+                </center>
+            </div>
             <div id="lyrics-div" class="no-display">
                 <p id="lyrics-para">Loading Lyrics....</p>
             </div>
@@ -43,7 +54,6 @@
                 <div class="wrapper">
                     <center>
                         <div class="buttons" id="butons">
-                            <div id="user" onclick="user()" ><i class="fa fa-user"></i></div>
                             <div id="back" onclick="prevTrack()">
                                 <i class="fa fa-step-backward"></i>
                             </div>
@@ -52,10 +62,6 @@
                             </div>
                             <div id="next" onclick="nextTrack()">
                                 <i class="fa fa-step-forward"></i>
-                            </div>
-                            <div id="user" onclick="serch()" ><i class="fa fa-search"></i></div>
-                            <div class="STOP" id="lyrics" onclick="manageLyricsClick()">
-                                <i class="fa fa-music"></i>
                             </div>
                         </div>
                         <div class="slider_container">

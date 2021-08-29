@@ -18,56 +18,32 @@ let updateTimer;
 let curr_track = document.createElement("audio");
 
 // Define the tracks that have to be played
+// The music we use are not owned by us!! 
 let track_list = [
     {
-        name: "Lost in Sound",
-        image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.scdn.co%2Fimage%2F8981ea334e8c9c524fac295ba8b737c851812d00&f=1&nofb=1",
-        path: "https://cdn.discordapp.com/attachments/750607286111567933/870186233886806066/Lost_In_Sound.mp3",
+        name: "StarDust",
+        image: "/img/1.jpeg",
+        path: "/songs/Stardust.mp3",
     },
     {
-        name: "Together",
-        author: "Marshmello",
-        path: "https://cdn.discordapp.com/attachments/775740994595323954/782130204519694336/Marshmello_-_Together_Official_Music_VideoMP3_160K.mp3"
+        name: "Alan Walker - Spectre",
+        image: "/img/3.jpeg",
+        path: "/songs/Spectre.mp3",
     },
     {
-        name: "Come & Get It",
-        author: "Selena Gomez",
-        path: "https://cdn.discordapp.com/attachments/775740994595323954/782130215966605332/Selena_Gomez_-_Come___Get_ItMP3_128K.mp3"
+        name: "Marshmello - Alone",
+        image: "/img/4.jpeg",
+        path: "/songs/Alone.mp3",
     },
     {
-        name: "Boy With Luv",
-        author: "BTS",
-        path: "https://cdn.discordapp.com/attachments/775740994595323954/782130258811289620/BTS____Boy_With_Luv_feat._HalMP3_160K.mp3"
+        name: "Astronomia",
+        image: "/img/moosik.jpeg",
+        path: "/songs/Astronomia.mp3",
     },
     {
-        name: "Rockabye",
-        author: "Clean Bandit",
-        path: "https://cdn.discordapp.com/attachments/775740994595323954/782130262342893618/Clean_Bandit_-_Rockabye_feat._Sean_Paul___Anne-MaMP3_160K.mp3"
-    },
-    {
-        name: "Blank Space",
-        author: "Taylor Swift",
-        path: "https://cdn.discordapp.com/attachments/775740994595323954/782130294697885696/Taylor_Swift_-_Blank_SpaceMP3_160K.mp3"
-    },
-    {
-        name: "What Do You Mean",
-        author: "Justin Bieber",
-        path: "https://cdn.discordapp.com/attachments/775740994595323954/782130340311203840/Justin_Bieber_-_What_Do_You_Mean__Official_MusicMP3_160K.mp3"
-    },
-    {
-        name: "As Long As You Love Me",
-        author: "Justin Bieber",
-        path: "https://cdn.discordapp.com/attachments/775740994595323954/782130390810230824/Justin_Bieber_-_As_Long_As_You_Love_Me_ft._Big_SeaMP3_160K.mp3"
-    },
-    {
-        name: "Confident",
-        author: "Justin Bieber ft. Chance The Rapper - YouTube",
-        path: "https://cdn.discordapp.com/attachments/775740994595323954/782130398385143818/Justin_Bieber_-_Confident_ft._Chance_The_Rapper_OMP3_160K.mp3"
-    },
-    {
-        name: "Intentions",
-        author: "Justin Bieber ft. Quavo",
-        path: "https://cdn.discordapp.com/attachments/775740994595323954/782130437514067998/Justin_Bieber_-_Intentions_ft._Quavo_Official_VidMP3_160K.mp3"
+        name: "Afterdark - MYRNE",
+        image: "/img/5.jpeg",
+        path: "/songs/Afterdark.mp3",
     },
 ];
 
