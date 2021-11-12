@@ -23,27 +23,27 @@ let track_list = [
     {
         name: "StarDust",
         image: "./img/1.jpeg",
-        path: "/songs/Stardust.mp3",
+        path: "./songs/Stardust.mp3",
     },
     {
         name: "Alan Walker - Spectre",
         image: "./img/3.jpeg",
-        path: "/songs/Spectre.mp3",
+        path: "./songs/Spectre.mp3",
     },
     {
         name: "Marshmello - Alone",
         image: "./img/4.jpeg",
-        path: "/songs/Alone.mp3",
+        path: "./songs/Alone.mp3",
     },
     {
         name: "Astronomia",
         image: "./img/moosik.jpeg",
-        path: "/songs/Astronomia.mp3",
+        path: "./songs/Astronomia.mp3",
     },
     {
         name: "Afterdark - MYRNE",
         image: "./img/5.jpeg",
-        path: "/songs/Afterdark.mp3",
+        path: "./songs/Afterdark.mp3",
     },
 ];
 
